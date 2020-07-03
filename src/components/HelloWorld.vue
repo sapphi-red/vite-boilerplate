@@ -2,7 +2,8 @@
   <h1>{{ msg }}</h1>
   <button @click="count++">count is: {{ count }}</button>
   <p>
-    Edit <code>components/HelloWorld.vue</code> to test hot module replacement.
+    Edit <code>components/HelloWorld.vue</code> to test hot module
+    <span :class="$style.re">replacement</span>.
   </p>
 </template>
 
@@ -23,3 +24,9 @@ export default defineComponent({
   }
 })
 </script>
+
+<style module>
+.re {
+  font-weight: bold;
+}
+</style>
